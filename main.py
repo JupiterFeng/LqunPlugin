@@ -50,6 +50,12 @@ class MyPlugin(BasePlugin):
             ctx.add_return("reply", responses[msg])
             ctx.prevent_default()
 
+        if msg == "下班":
+            message_chain = MessageChain()
+            message_chain.append(Image(url="blob:https://dash.cloudflare.com/319a160a-e43a-45bc-811b-8ff303cf9aa8"))
+            ctx.add_return("reply", message_chain)
+            ctx.prevent_default()
+
     # 插件卸载时触发
     def __del__(self):
         pass
