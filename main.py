@@ -36,6 +36,7 @@ class MyPlugin(BasePlugin):
             "千阿姨": ["全都按法来 都完犊子了"],
             "布衣": ["舔脚"],
             "buyi": ["舔脚"],
+            "仓鼠": ["哦哈幺义父"],
         }
         
         if msg in responses:
