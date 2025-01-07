@@ -43,6 +43,9 @@ class MyPlugin(BasePlugin):
         if msg == "明公":
             ctx.add_return("reply", ["诈骗犯来喽"])
             ctx.prevent_default()
+        if msg == "蓝枫":
+            ctx.add_return("reply", ["老登爆金币"])
+            ctx.prevent_default()
 
     # 插件卸载时触发
     def __del__(self):
