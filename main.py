@@ -4,7 +4,7 @@ import random
 
 
 # 注册插件
-@register(name="Dice", description="骰子模拟器", version="0.2", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
