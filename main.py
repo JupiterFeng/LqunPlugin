@@ -4,7 +4,7 @@ import random
 
 
 # 注册插件
-@register(name="LqunLanguage", description="萝群语录", version="1.0", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0.1", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
@@ -34,6 +34,8 @@ class MyPlugin(BasePlugin):
             "小千": ["全都按法来 都完犊子了"],
             "小千阿姨": ["全都按法来 都完犊子了"],
             "千阿姨": ["全都按法来 都完犊子了"],
+            "布衣": ["舔脚"],
+            "buyi": ["舔脚"],
         }
         
         if msg in responses:
