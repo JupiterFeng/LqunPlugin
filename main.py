@@ -19,32 +19,25 @@ class MyPlugin(BasePlugin):
     @handler(GroupNormalMessageReceived)
     async def group_normal_message_received(self, ctx: EventContext):
         msg = ctx.event.text_message  # 这里的 event 即为 GroupNormalMessageReceived 的对象
-        if msg == "查尔斯":
-            ctx.add_return("reply", ["今晚八点"])
-            ctx.prevent_default()
-        if msg == "机师":
-            ctx.add_return("reply", ["死刑"])
-            ctx.prevent_default()
-        if msg == "147":
-            ctx.add_return("reply", ["查尔斯来我就来"])
-            ctx.prevent_default()
-        if msg == "煎包":
-            ctx.add_return("reply", ["147来我就来"])
-            ctx.prevent_default()
-        if msg == "老白":
-            ctx.add_return("reply", ["兵呢？星呢？塔呢？"])
-            ctx.prevent_default()
-        if msg == "Licc":
-            ctx.add_return("reply", ["我要波你嘴了"])
-            ctx.prevent_default()
-        if msg == "炸鸡":
-            ctx.add_return("reply", ["够罕见"])
-            ctx.prevent_default()
-        if msg == "明公":
-            ctx.add_return("reply", ["诈骗犯来喽"])
-            ctx.prevent_default()
-        if msg == "蓝枫":
-            ctx.add_return("reply", ["老登爆金币"])
+        responses = {
+            "查尔斯": ["今晚八点"],
+            "机师": ["死刑"],
+            "147": ["查尔斯来我就来"],
+            "煎包": ["147来我就来"],
+            "老白": ["兵呢？星呢？塔呢？"],
+            "Licc": ["我要波你嘴了"],
+            "炸鸡": ["够罕见"],
+            "明公": ["诈骗犯来喽"],
+            "蓝枫": ["老登爆金币"],
+            "肚腩": ["该重开了"],
+            "千总": ["全都按法来 都完犊子了"],
+            "小千": ["全都按法来 都完犊子了"],
+            "小千阿姨": ["全都按法来 都完犊子了"],
+            "千阿姨": ["全都按法来 都完犊子了"],
+        }
+        
+        if msg in responses:
+            ctx.add_return("reply", responses[msg])
             ctx.prevent_default()
 
     # 插件卸载时触发
