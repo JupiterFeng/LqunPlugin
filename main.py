@@ -1,10 +1,11 @@
 from pkg.plugin.context import register, handler, llm_func, BasePlugin, APIHost, EventContext
 from pkg.plugin.events import *  # 导入事件类
+from pkg.platform.types import *
 import random
 
 
 # 注册插件
-@register(name="LqunLanguage", description="萝群语录", version="1.0.6", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0.7", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
@@ -51,8 +52,9 @@ class MyPlugin(BasePlugin):
             ctx.prevent_default()
 
         if msg == "下班":
-            message_chain = MessageChain()
-            message_chain.append(Image(url="blob:https://dash.cloudflare.com/319a160a-e43a-45bc-811b-8ff303cf9aa8"))
+            message_chain = MessageChain([
+                Image(url="blob:https://dash.cloudflare.com/319a160a-e43a-45bc-811b-8ff303cf9aa8")
+            ])
             ctx.add_return("reply", message_chain)
             ctx.prevent_default()
 
