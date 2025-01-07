@@ -4,7 +4,7 @@ import random
 
 
 # 注册插件
-@register(name="LqunLanguage", description="萝群语录", version="1.0.4", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0.5", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
@@ -40,6 +40,10 @@ class MyPlugin(BasePlugin):
             "翼瑾": ["我不玩了,求求你把钱还给我"],
             "遗精": ["我不玩了,求求你把钱还给我"],
             "吕布": ["臭外地的"],
+            "老魏": ["我开凯迪拉克创你"],
+            "萝莉": ["你的电脑,我来配"],
+            "小麦": ["你好,我是小炮,我爱打麦"],
+            "小炮": ["你好,我是小炮,我爱打麦"],
         }
         
         if msg in responses:
