@@ -5,7 +5,7 @@ import random
 
 
 # 注册插件
-@register(name="LqunLanguage", description="萝群语录", version="1.0.7", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0.8", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
@@ -53,7 +53,7 @@ class MyPlugin(BasePlugin):
 
         if msg == "下班":
             message_chain = MessageChain([
-                Image(url="blob:https://dash.cloudflare.com/319a160a-e43a-45bc-811b-8ff303cf9aa8")
+                Image(url="https://pic.879818327.xyz/A9318B287772F571E62097FE9CB462D2.jpg")
             ])
             ctx.add_return("reply", message_chain)
             ctx.prevent_default()
