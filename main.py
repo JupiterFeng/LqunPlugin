@@ -5,7 +5,7 @@ import random
 
 
 # 注册插件
-@register(name="LqunLanguage", description="萝群语录", version="1.0.9", author="jianrenjun")
+@register(name="LqunLanguage", description="萝群语录", version="1.0.10", author="jianrenjun")
 class MyPlugin(BasePlugin):
 
     # 插件加载时触发
@@ -23,11 +23,11 @@ class MyPlugin(BasePlugin):
         responses = {
             "查尔斯": ["今晚八点"],
             "机师": MessageChain([
-                PlainText("死刑"),
+                Plain("死刑"),
                 Image(url="https://pic.879818327.xyz/537CB36B9205E0F434167A89A19BF711.jpg"),
             ]),
             "技师": MessageChain([
-                PlainText("死刑"),
+                Plain("死刑"),
                 Image(url="https://pic.879818327.xyz/537CB36B9205E0F434167A89A19BF711.jpg"),
             ]),
             "147": ["查尔斯来我就来"],
